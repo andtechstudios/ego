@@ -1,0 +1,16 @@
+{
+    "name": "Andtech.Ego",
+    "rootNamespace": "Andtech.Ego",
+    "references": [
+        "GUID:2fe56c879947fbf49bc39ad85f14be5c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

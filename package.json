@@ -1,0 +1,27 @@
+{
+	"name": "com.andtech.ego",
+	"version": "0.1.0",
+	"displayName": "Ego",
+	"description": "First-person shooter engine for Unity",
+	"author": {
+		"name": "AndrewMJordan",
+		"email": null
+	},
+	"samples": [
+		{
+			"displayName": "Graphics",
+			"Description": "Demonstrates how to create tracers, ricochets, etc. (Requires Simple Dynamics)",
+			"path": "Samples~/Graphics"
+		},
+		{
+			"displayName": "Simple Dynamics",
+			"Description": "Demonstrates how to create a dynamics system",
+			"path": "Samples~/Simple Dynamics"
+		},
+		{
+			"displayName": "Simple FPS View",
+			"Description": "Basic fps view",
+			"path": "Samples~/Simple FPS View"
+		}
+	]
+}
