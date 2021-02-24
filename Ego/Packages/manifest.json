@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.andtech.core": "https://github.com/AndrewMJordan/andtech.git#upm",
-    "com.andtech.prototyping": "https://github.com/AndrewMJordan/prototyping.git#upm",
+    "com.andtech.core": "https://github.com/AndrewMJordan/andtech.git#v0.1.1",
+    "com.andtech.prototyping": "https://github.com/AndrewMJordan/prototyping.git#v0.1.1",
     "com.unity.collab-proxy": "1.3.9",
     "com.unity.ide.rider": "2.0.7",
     "com.unity.ide.visualstudio": "2.0.5",
