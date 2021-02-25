@@ -20,7 +20,7 @@
 		"url": "https://github.com/AndrewMJordan/"
 	},
 	"repository": "https://github.com/AndrewMJordan/ego.git",
-	"license": "BSD-4-Clause",
+	"license": "BSD-3-Clause",
 	"samples": [
 		{
 			"displayName": "Graphics",
