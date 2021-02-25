@@ -1,6 +1,6 @@
 {
 	"name": "com.andtech.ego",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"displayName": "Ego",
 	"description": "First-person shooter engine for Unity",
 	"unity": "2019.4",
@@ -20,7 +20,7 @@
 		"url": "https://github.com/AndrewMJordan/"
 	},
 	"repository": "https://github.com/AndrewMJordan/ego.git",
-	"license": "BSD-4-Clause",
+	"license": "BSD-3-Clause",
 	"samples": [
 		{
 			"displayName": "Graphics",
