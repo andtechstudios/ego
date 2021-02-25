@@ -3,13 +3,24 @@
 	"version": "0.1.2",
 	"displayName": "Ego",
 	"description": "First-person shooter engine for Unity",
+	"unity": "2019.4",
+	"dependencies": {
+		"com.andtech.core": "0.1.2"
+	},
+	"keywords": [
+		"andtech",
+		"fps",
+		"ego",
+		"shooter"
+	],
+	"type": "tool",
 	"author": {
 		"name": "AndrewMJordan",
-		"email": null
+		"email": "mail@andtech.me",
+		"url": "https://github.com/AndrewMJordan/"
 	},
-	"dependencies": {
-		"com.andtech.core": "https://github.com/AndrewMJordan/andtech.git#v0.1.1"
-	},
+	"repository": "https://github.com/AndrewMJordan/ego.git",
+	"license": "BSD-4-Clause",
 	"samples": [
 		{
 			"displayName": "Graphics",
