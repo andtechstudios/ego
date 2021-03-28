@@ -1,11 +1,11 @@
 {
 	"name": "com.andtech.ego",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"displayName": "Ego",
 	"description": "First-person shooter engine for Unity",
 	"unity": "2019.4",
 	"dependencies": {
-		"com.andtech.core": "0.1.2"
+		"com.andtech.core": "0.1.4"
 	},
 	"keywords": [
 		"andtech",
