@@ -1,44 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Andtech.Ego {
+namespace Andtech.Ego
+{
 
-	public class DynamicsFactory<TArgs, TTask> {
-		private readonly Dictionary<Type, Func<TArgs, TTask>> factories = new Dictionary<Type, Func<TArgs, TTask>>();
+    public class DynamicsFactory<TArgs, TTask>
+    {
+        private readonly Dictionary<Type, Func<TArgs, TTask>> factories = new Dictionary<Type, Func<TArgs, TTask>>();
 
-		public void Add<T>(Func<TArgs, T> objectFactory) where T : TTask {
-			factories.Add(typeof(T), args => objectFactory(args));
-		}
+        public void Add<T>(Func<TArgs, T> objectFactory) where T : TTask
+        {
+            factories.Add(typeof(T), args => objectFactory(args));
+        }
 
-		public TTask Initiate(Type type, TArgs args) {
-			var hasFactory = factories.TryGetValue(type, out var factory);
-			if (hasFactory) {
-				var task = factory(args);
+        public TTask Initiate(Type type, TArgs args)
+        {
+            var hasFactory = factories.TryGetValue(type, out var factory);
+            if (hasFactory)
+            {
+                var task = factory(args);
 
-				Initiated?.Invoke(this, new DynamicsFactoryEventArgs<TArgs, TTask>(args, task));
+                Initiated?.Invoke(this, new DynamicsFactoryEventArgs<TArgs, TTask>(args, task));
 
-				return task;
-			}
+                return task;
+            }
 
-			return default;
-		}
+            return default;
+        }
 
-		public T Initiate<T>(TArgs args) where T : TTask {
-			var hasFactory = factories.TryGetValue(typeof(T), out var factory);
-			if (hasFactory) {
-				var task = factory(args);
+        public T Initiate<T>(TArgs args) where T : TTask
+        {
+            var hasFactory = factories.TryGetValue(typeof(T), out var factory);
+            if (hasFactory)
+            {
+                var task = factory(args);
 
-				Initiated?.Invoke(this, new DynamicsFactoryEventArgs<TArgs, TTask>(args, task));
+                Initiated?.Invoke(this, new DynamicsFactoryEventArgs<TArgs, TTask>(args, task));
 
-				return (T)task;
-			}
+                return (T)task;
+            }
 
-			return default;
-		}
+            return default;
+        }
 
-		#region EVENT
-		public event EventHandler<DynamicsFactoryEventArgs<TArgs, TTask>> Initiated;
-		#endregion
+        #region EVENT
+        public event EventHandler<DynamicsFactoryEventArgs<TArgs, TTask>> Initiated;
+        #endregion
 
-	}
+    }
 }

@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 
-namespace Andtech.Ego {
+namespace Andtech.Ego
+{
 
-	public class SimpleFPSPlayerDemo : MonoBehaviour {
-		public SpreadController spreadController;
-		public SpreadProfile spreadProfile;
-		public Crosshair crosshair;
+    public class SimpleFPSPlayerDemo : MonoBehaviour
+    {
+        public SpreadController spreadController;
+        public SpreadProfile spreadProfile;
+        public Crosshair crosshair;
 
-		void Start() {
-			spreadController.Load(spreadProfile);
-			crosshair.Link(spreadController.ActionPoint);
-		}
-	}
+        void Start()
+        {
+            spreadController.Load(spreadProfile);
+            crosshair.Link(spreadController.ActionPoint);
+        }
+    }
 }

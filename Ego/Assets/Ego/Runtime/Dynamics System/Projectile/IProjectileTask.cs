@@ -1,23 +1,26 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Andtech.Ego {
+namespace Andtech.Ego
+{
 
-	public interface IProjectileTask {
-		Vector3 CurrentPosition { get; }
+    public interface IProjectileTask
+    {
+        Vector3 CurrentPosition { get; }
 
-		void Run();
+        void Run();
 
-		#region EVENT
-		event EventHandler<ImpactEventArgs> Impacted;
-		#endregion
-	}
+        #region EVENT
+        event EventHandler<ImpactEventArgs> Impacted;
+        #endregion
+    }
 
-	public interface IProjectileTaskLifetime {
+    public interface IProjectileTaskLifetime
+    {
 
-		#region PIPELINE
-		event EventHandler Launched;
-		event EventHandler Destroyed;
-		#endregion
-	}
+        #region PIPELINE
+        event EventHandler Launched;
+        event EventHandler Destroyed;
+        #endregion
+    }
 }

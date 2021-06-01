@@ -1,6 +1,8 @@
-﻿namespace Andtech.Ego {
+﻿namespace Andtech.Ego
+{
 
-	public interface IProjectileSpawner {
-		IProjectileArgs Args { get; }
-	}
+    public interface IProjectileSpawner
+    {
+        IProjectileArgs Args { get; }
+    }
 }

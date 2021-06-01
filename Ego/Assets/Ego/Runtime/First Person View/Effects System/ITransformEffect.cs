@@ -1,19 +1,23 @@
 ﻿using UnityEngine;
 
-namespace Andtech.Ego {
+namespace Andtech.Ego
+{
 
-	public interface IPositionEffect {
+    public interface IPositionEffect
+    {
 
-		Vector3 GetPosition();
-	}
+        Vector3 GetPosition();
+    }
 
-	public interface IRotationEffect {
+    public interface IRotationEffect
+    {
 
-		Vector3 GetRotation();
-	}
+        Vector3 GetRotation();
+    }
 
-	public interface IScaleEffect {
+    public interface IScaleEffect
+    {
 
-		Vector3 GetScale();
-	}
+        Vector3 GetScale();
+    }
 }
