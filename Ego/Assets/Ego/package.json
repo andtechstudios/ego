@@ -1,0 +1,48 @@
+{
+	"name": "com.andtech.ego",
+	"version": "0.1.7",
+	"displayName": "Ego",
+	"description": "First-person shooter engine for Unity",
+	"unity": "2019.4",
+	"dependencies": {
+		"com.andtech.core": "0.1.4"
+	},
+	"keywords": [
+		"andtech",
+		"fps",
+		"ego",
+		"shooter"
+	],
+	"type": "tool",
+	"author": {
+		"name": "Andtech Games",
+		"email": "andtechgames@gmail.com",
+		"url": "https://github.com/AndtechGames/"
+	},
+	"license": "BSD-3-Clause",
+	"samples": [
+		{
+			"displayName": "Graphics",
+			"description": "Demonstrates how to create tracers, ricochets, etc. (Requires Simple Dynamics)",
+			"path": "Samples/Graphics"
+		},
+		{
+			"displayName": "Simple Dynamics",
+			"description": "Demonstrates how to create a dynamics system",
+			"path": "Samples/Simple Dynamics"
+		},
+		{
+			"displayName": "Simple FPS View",
+			"description": "Basic fps view",
+			"path": "Samples/Simple FPS View"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/AndtechGames/ego.git",
+		"directory": null
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/@AndtechGames"
+	}
+}
