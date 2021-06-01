@@ -1,9 +1,9 @@
 {
 	"name": "com.andtech.ego",
-	"version": "0.1.6",
 	"displayName": "Ego",
-	"description": "First-person shooter engine for Unity",
+	"version": "0.1.7",
 	"unity": "2019.4",
+	"description": "First-person shooter engine for Unity",
 	"dependencies": {
 		"com.andtech.core": "0.1.4"
 	},
@@ -15,7 +15,7 @@
 	],
 	"type": "tool",
 	"author": {
-		"name": "AndtechGames",
+		"name": "Andtech Games",
 		"email": "andtechgames@gmail.com",
 		"url": "https://github.com/AndtechGames/"
 	},

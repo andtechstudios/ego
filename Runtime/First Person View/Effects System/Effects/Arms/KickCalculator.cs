@@ -10,68 +10,78 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Andtech.Ego {
+namespace Andtech.Ego
+{
 
-	[Serializable]
-	public class KickCalculator {
-		public float WindupDuration {
-			get => windupDuration;
-			set => windupDuration = value;
-		}
-		public float ResetSpeed {
-			get => resetSpeed;
-			set => resetSpeed = value;
-		}
-		public Vector3 MaxKickOffset {
-			get => maxKickOffset;
-			set => maxKickOffset = value;
-		}
-		public Vector3 MaxKickEulerAngles {
-			get => maxKickEulerAngles;
-			set => maxKickEulerAngles = value;
-		}
+    [Serializable]
+    public class KickCalculator
+    {
+        public float WindupDuration
+        {
+            get => windupDuration;
+            set => windupDuration = value;
+        }
+        public float ResetSpeed
+        {
+            get => resetSpeed;
+            set => resetSpeed = value;
+        }
+        public Vector3 MaxKickOffset
+        {
+            get => maxKickOffset;
+            set => maxKickOffset = value;
+        }
+        public Vector3 MaxKickEulerAngles
+        {
+            get => maxKickEulerAngles;
+            set => maxKickEulerAngles = value;
+        }
 
-		[SerializeField]
-		private float windupDuration = 0.0085F;
-		[SerializeField]
-		private float resetSpeed = 0.25F;
-		[SerializeField]
-		private Vector3 maxKickOffset = new Vector3(0.0F, 0.0F, -0.1F);
-		[SerializeField]
-		private Vector3 maxKickEulerAngles = new Vector3(0.0F, 0.0F, 0.0F);
+        [SerializeField]
+        private float windupDuration = 0.0085f;
+        [SerializeField]
+        private float resetSpeed = 0.25f;
+        [SerializeField]
+        private Vector3 maxKickOffset = new Vector3(0.0f, 0.0f, -0.1f);
+        [SerializeField]
+        private Vector3 maxKickEulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
 
-		private float kickAlpha;
+        private float kickAlpha;
 
-		private Vector3 targetPosition;
-		private Vector3 targetEulerAngles;
+        private Vector3 targetPosition;
+        private Vector3 targetEulerAngles;
 
-		public IEnumerator Play() {
-			targetPosition.x = UnityEngine.Random.Range(-MaxKickOffset.x, MaxKickOffset.x);
-			targetPosition.y = UnityEngine.Random.Range(-MaxKickOffset.y, MaxKickOffset.y);
-			targetPosition.z = MaxKickOffset.z;
-			targetEulerAngles.x = MaxKickEulerAngles.x;
-			targetEulerAngles.y = MaxKickEulerAngles.y;
-			targetEulerAngles.z = MaxKickEulerAngles.z;
+        public IEnumerator Play()
+        {
+            targetPosition.x = UnityEngine.Random.Range(-MaxKickOffset.x, MaxKickOffset.x);
+            targetPosition.y = UnityEngine.Random.Range(-MaxKickOffset.y, MaxKickOffset.y);
+            targetPosition.z = MaxKickOffset.z;
+            targetEulerAngles.x = MaxKickEulerAngles.x;
+            targetEulerAngles.y = MaxKickEulerAngles.y;
+            targetEulerAngles.z = MaxKickEulerAngles.z;
 
-			return Kicking();
-		}
+            return Kicking();
+        }
 
-		public Vector3 GetKickPosition() => targetPosition * kickAlpha;
+        public Vector3 GetKickPosition() => targetPosition * kickAlpha;
 
-		public Vector3 GetKickRotation() => targetEulerAngles * kickAlpha;
+        public Vector3 GetKickRotation() => targetEulerAngles * kickAlpha;
 
-		#region COROUTINE
-		private IEnumerator Kicking() {
-			foreach (float alpha in Tween.Linear(windupDuration)) {
-				kickAlpha = Mathf.Lerp(0.0F, 1.0F, alpha);
-				yield return null;
-			}
+        #region COROUTINE
+        private IEnumerator Kicking()
+        {
+            foreach (float alpha in Tween.Linear(windupDuration))
+            {
+                kickAlpha = Mathf.Lerp(0.0f, 1.0f, alpha);
+                yield return null;
+            }
 
-			foreach (float alpha in Tween.EaseOutQuadratic(resetSpeed)) {
-				kickAlpha = Mathf.Lerp(1.0F, 0.0F, alpha);
-				yield return null;
-			}
-		}
-		#endregion
-	}
+            foreach (float alpha in Tween.EaseOutQuadratic(resetSpeed))
+            {
+                kickAlpha = Mathf.Lerp(1.0f, 0.0f, alpha);
+                yield return null;
+            }
+        }
+        #endregion
+    }
 }
